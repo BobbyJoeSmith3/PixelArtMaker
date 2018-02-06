@@ -1,7 +1,7 @@
 // Select color input
 // Select size input
-let canvasHeight = document.getElementById('inputHeight').value;
-let canvasWidth = document.getElementById('inputWidth').value;
+let canvasHeight;
+let canvasWidth;
 
 // When size is submitted by the user, call makeGrid()
 
