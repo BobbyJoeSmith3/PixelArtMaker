@@ -44,10 +44,10 @@ function makeGrid() {
   getGridHeight();
   getGridWidth();
   console.log('height: ' + canvasHeight + ', width: ' + canvasWidth);
-  for (let i = 0; i < getGridHeight(); i++) {
+  for (let i = 0; i < canvasHeight; i++) {
     let tableRow = document.createElement('tr');
     canvas.append(tableRow);
-    for (let j = 0; j < getGridWidth(); j++) {
+    for (let j = 0; j < canvasWidth; j++) {
       let tableCell = document.createElement('td');
       tableRow.appendChild(tableCell);
     }
