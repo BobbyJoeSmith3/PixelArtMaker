@@ -2,6 +2,8 @@
 // Select size input
 let canvasHeight;
 let canvasWidth;
+const canvas = document.getElementById("pixelCanvas");
+
 
 // When size is submitted by the user, call makeGrid()
 
@@ -23,4 +25,9 @@ function makeGrid() {
   getGridHeight();
   getGridWidth();
   console.log('height: ' + canvasHeight + ', width: ' + canvasWidth);
+  for (let i = 0; i < getGridHeight(); i++) {
+    let tableRow = document.createElement('tr');
+    canvas.append(tableRow);
+  }
+
 }
