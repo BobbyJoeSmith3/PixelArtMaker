@@ -28,6 +28,9 @@ function makeGrid() {
   for (let i = 0; i < getGridHeight(); i++) {
     let tableRow = document.createElement('tr');
     canvas.append(tableRow);
+    for (let j = 0; j < getGridWidth(); j++) {
+      let tableCell = document.createElement('td');
+      tableRow.appendChild(tableCell);
+    }
   }
-
 }
