@@ -6,7 +6,6 @@ const canvas = document.getElementById("pixelCanvas");
 
 
 // When size is submitted by the user, call makeGrid()
-
 document.getElementById('submitButton').onclick = makeGrid;
 
 function getGridHeight() {
@@ -19,7 +18,16 @@ function getGridWidth() {
   return canvasWidth;
 }
 
+function clearCanvas() {
+  let numberOfRows = canvas.rows.length;
+  while (numberOfRows > 0) {
+    canvas.deleteRow(0)
+    numberOfRows--;
+  }
+}
+
 function makeGrid() {
+  clearCanvas();
 
 // Your code goes here!
   getGridHeight();
