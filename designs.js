@@ -34,7 +34,10 @@ function getColor() {
 
 function colorCell(e) {
   getColor();
-  e.target.style.backgroundColor = currentColor;
+  // Only apply color if table cell is clicked, not table or table row
+  if (e.target.nodeName === 'TD') {
+    e.target.style.backgroundColor = currentColor;
+  }
 }
 
 function makeGrid() {
