@@ -2,6 +2,7 @@
 // Select size input
 let canvasHeight;
 let canvasWidth;
+let currentColor;
 const canvas = document.getElementById("pixelCanvas");
 
 
@@ -26,6 +27,16 @@ function clearCanvas() {
   }
 }
 
+function getColor() {
+  currentColor = document.getElementById('colorPicker').value;
+  console.log("The current color is: " + currentColor);
+}
+
+function colorCell(e) {
+  getColor();
+  e.target.style.backgroundColor = currentColor;
+}
+
 function makeGrid() {
   clearCanvas();
 
@@ -42,3 +53,5 @@ function makeGrid() {
     }
   }
 }
+
+canvas.addEventListener('click', colorCell);
