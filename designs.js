@@ -41,12 +41,15 @@ function colorCell(e) {
 }
 
 function makeGrid() {
+  // Restructure canvas everytime new dimensions are submitted
   clearCanvas();
-
-// Your code goes here!
+  // Update canvasHeight and canvasWidth variables
   getGridHeight();
   getGridWidth();
-  console.log('height: ' + canvasHeight + ', width: ' + canvasWidth);
+  // Log new dimensions to console
+  // console.log('height: ' + canvasHeight + ', width: ' + canvasWidth);
+
+  // Create table
   for (let i = 0; i < canvasHeight; i++) {
     let tableRow = document.createElement('tr');
     canvas.append(tableRow);
